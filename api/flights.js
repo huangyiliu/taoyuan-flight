@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   const flightArray = Array.isArray(flight) ? flight : [flight];
 
   try {
-    const response = await fetch("https://data.moeca.gov.tw/Service/OpenData/FlightData.aspx");
+    const response = await fetch("https://quality.data.gov.tw/dq_download_json.php?nid=140327&md5_url=65b4d4418c6e6c86e37a76a1b3e7e157");
     const data = await response.json();
 
     const today = new Date().toISOString().split("T")[0];
